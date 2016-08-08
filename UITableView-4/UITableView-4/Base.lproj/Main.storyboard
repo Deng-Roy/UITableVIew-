@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4OC-i1-BTB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--省份列表-->
+        <scene sceneID="EXP-Sz-doy">
+            <objects>
+                <tableViewController storyboardIdentifier="MainUITableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0oA-HF-KNL" customClass="MainUITableViewTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" id="bkw-GL-3WJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RoyCell" rowHeight="17" id="Ckp-eX-V15">
+                                <rect key="frame" x="0.0" y="92" width="320" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ckp-eX-V15" id="6uT-so-6EM">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="16.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="awC-xL-wNe" kind="push" id="XjD-SP-pCp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0oA-HF-KNL" id="XPF-Wf-sp9"/>
+                            <outlet property="delegate" destination="0oA-HF-KNL" id="CaS-Ya-rfG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="省份列表" id="4Qg-R7-Tso">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="3UI-DL-5Ig"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHq-in-R7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="240"/>
+        </scene>
+        <!--城市列表-->
+        <scene sceneID="VlB-e9-mbP">
+            <objects>
+                <tableViewController id="awC-xL-wNe" customClass="citiesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xte-UF-EZh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoycityCell" id="xyS-KU-9vD">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xyS-KU-9vD" id="7mD-FK-bRH">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="awC-xL-wNe" id="NBp-Fx-kp4"/>
+                            <outlet property="delegate" destination="awC-xL-wNe" id="9Y3-u8-S8J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="城市列表" id="IND-gX-JWE">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Ykd-H0-Tlo"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTz-6H-4rI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="290"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iy6-UQ-Yen">
+            <objects>
+                <navigationController id="4OC-i1-BTB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HUo-o6-X7x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0oA-HF-KNL" kind="relationship" relationship="rootViewController" id="dEf-PP-tyV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVK-9H-HsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="234"/>
+        </scene>
+    </scenes>
+</document>
